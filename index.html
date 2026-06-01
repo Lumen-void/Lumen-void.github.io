@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lumen Void Project Portfolio</title>
+  <style>
+    :root {
+      --bg: #080a0d;
+      --panel: #11161d;
+      --panel-2: #151d26;
+      --ink: #f7fafc;
+      --muted: #a8b3c1;
+      --line: #2a3442;
+      --green: #27c986;
+      --cyan: #42c8f5;
+      --amber: #f2b84b;
+      --rose: #fb7185;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 12% 10%, rgba(39, 201, 134, 0.18), transparent 30%),
+        radial-gradient(circle at 84% 0%, rgba(66, 200, 245, 0.14), transparent 28%),
+        linear-gradient(180deg, #080a0d 0%, #0d1218 48%, #0a0f14 100%);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .shell {
+      width: min(1180px, calc(100% - 36px));
+      margin: 0 auto;
+      padding: 32px 0 56px;
+    }
+
+    header {
+      min-height: 54vh;
+      display: grid;
+      align-content: center;
+      gap: 28px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      width: fit-content;
+      align-items: center;
+      gap: 10px;
+      color: var(--green);
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 12px;
+      border: 1px solid rgba(39, 201, 134, 0.42);
+      border-radius: 999px;
+      padding: 8px 12px;
+      background: rgba(39, 201, 134, 0.08);
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 980px;
+      font-size: clamp(48px, 8vw, 112px);
+      line-height: 0.9;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      max-width: 780px;
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(18px, 2.2vw, 24px);
+      line-height: 1.55;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button {
+      min-height: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border-radius: 8px;
+      padding: 0 16px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      color: var(--ink);
+      font-weight: 800;
+    }
+
+    .button.primary {
+      border-color: rgba(39, 201, 134, 0.55);
+      background: var(--green);
+      color: #04100b;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: -38px;
+    }
+
+    .stat {
+      min-height: 118px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+      background: rgba(17, 22, 29, 0.86);
+      backdrop-filter: blur(20px);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 34px;
+      line-height: 1;
+    }
+
+    .stat span {
+      display: block;
+      margin-top: 12px;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .toolbar {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 18px;
+      margin: 42px 0 18px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(28px, 4vw, 44px);
+      letter-spacing: 0;
+    }
+
+    .note {
+      max-width: 560px;
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .project {
+      min-height: 238px;
+      display: grid;
+      gap: 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      background: linear-gradient(145deg, rgba(21, 29, 38, 0.96), rgba(12, 17, 23, 0.96));
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto;
+      height: 4px;
+      background: var(--accent, var(--green));
+    }
+
+    .project-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      align-items: start;
+    }
+
+    .project h3 {
+      margin: 0;
+      font-size: clamp(24px, 3vw, 34px);
+      letter-spacing: 0;
+    }
+
+    .tag {
+      flex: 0 0 auto;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      color: var(--muted);
+      border-radius: 999px;
+      padding: 7px 10px;
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .project p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-self: end;
+    }
+
+    .links a {
+      min-height: 40px;
+      display: inline-flex;
+      align-items: center;
+      border-radius: 8px;
+      padding: 0 13px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      font-weight: 800;
+    }
+
+    .links a:first-child {
+      background: rgba(39, 201, 134, 0.12);
+      border-color: rgba(39, 201, 134, 0.36);
+      color: #c9ffe8;
+    }
+
+    footer {
+      margin-top: 36px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    @media (max-width: 840px) {
+      header {
+        min-height: auto;
+        padding: 44px 0 70px;
+      }
+
+      .stats,
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stats {
+        margin-top: 18px;
+      }
+
+      .toolbar {
+        display: grid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <span class="eyebrow">Public portfolio deployments</span>
+      <h1>Working project demos for sharing and review.</h1>
+      <p class="lead">A single launch page for the public-safe GitHub deployments. Production databases, uploads, credentials, admin records and private server data are intentionally excluded.</p>
+      <div class="actions">
+        <a class="button primary" href="#projects">View projects</a>
+        <a class="button" href="https://github.com/Lumen-void">GitHub profile</a>
+      </div>
+    </header>
+
+    <section class="stats" aria-label="Deployment summary">
+      <div class="stat"><strong>10</strong><span>Public project deployments</span></div>
+      <div class="stat"><strong>200</strong><span>Verified live HTTP status on each page</span></div>
+      <div class="stat"><strong>0</strong><span>Task Manager App links published here</span></div>
+    </section>
+
+    <section id="projects" class="toolbar">
+      <h2>Projects</h2>
+      <p class="note">Use the live demo links for presentation. Use source links when someone needs to inspect the public-safe code package.</p>
+    </section>
+
+    <main class="grid">
+      <article class="project" style="--accent:#27c986">
+        <div class="project-head"><h3>SCAR</h3><span class="tag">Static app export</span></div>
+        <p>Travel architecture interface with the dark cinematic UI, navigation, destination/trip surfaces and public demo data.</p>
+        <div class="links"><a href="https://lumen-void.github.io/scar/">Live demo</a><a href="https://github.com/Lumen-void/scar">Source</a></div>
+      </article>
+
+      <article class="project" style="--accent:#42c8f5">
+        <div class="project-head"><h3>MIS Tool</h3><span class="tag">Visual workflow</span></div>
+        <p>MIS dashboard, import workflow, executive reporting and integrations screens shown with public-safe presentation media.</p>
+        <div class="links"><a href="https://lumen-void.github.io/miss/">Live demo</a><a href="https://github.com/Lumen-void/miss">Source</a></div>
+      </article>
+
+      <article class="project" style="--accent:#f2b84b">
+        <div class="project-head"><h3>Reco</h3><span class="tag">Static page</span></div>
+        <p>Public diagnostic HTML deployment prepared from the local Reco project without private local packages or cloud SDK files.</p>
+        <div class="links"><a href="https://lumen-void.github.io/reco/">Live demo</a><a href="https://github.com/Lumen-void/reco">Source</a></div>
+      </article>
+
+      <article class="project" style="--accent:#fb7185">
+        <div class="project-head"><h3>PazyFinance</h3><span class="tag">Finance workflow</span></div>
+        <p>Finance operations workspace covering procurement, invoices, payments, integrations, reimbursements and audit reporting.</p>
+        <div class="links"><a href="https://lumen-void.github.io/pazy/">Live demo</a><a href="https://github.com/Lumen-void/pazy">Source</a></div>
+      </article>
+
+      <article class="project" style="--accent:#a78bfa">
+        <div class="project-head"><h3>Doctor Referral</h3><span class="tag">Public frontend</span></div>
+        <p>Referral revenue, incentive and transaction analysis application published without local data or generated output files.</p>
+        <div class="links"><a href="https://lumen-void.github.io/doctor/">Live demo</a><a href="https://github.com/Lumen-void/doctor">Source</a></div>
+      </article>
+
+      <article class="project" style="--accent:#38bdf8">
+        <div class="project-head"><h3>JSA India</h3><span class="tag">Static website</span></div>
+        <p>Public website pages generated from PHP into static HTML with admin, uploads, data folders and private logo assets excluded.</p>
+        <div class="links"><a href="https://lumen-void.github.io/jsaindia/">Live demo</a><a href="https://github.com/Lumen-void/jsaindia">Source</a></div>
+      </article>
+
+      <article class="project" style="--accent:#34d399">
+        <div class="project-head"><h3>FinReady</h3><span class="tag">Static product site</span></div>
+        <p>AI finance operations and learning platform screens using the static backup, without admin panels or server-private files.</p>
+        <div class="links"><a href="https://lumen-void.github.io/finready/">Live demo</a><a href="https://github.com/Lumen-void/finready">Source</a></div>
+      </article>
+
+      <article class="project" style="--accent:#60a5fa">
+        <div class="project-head"><h3>Nektron</h3><span class="tag">Built frontend</span></div>
+        <p>Machine workflow platform frontend deployment with selected public media and sanitized project source packaging.</p>
+        <div class="links"><a href="https://lumen-void.github.io/nektron/">Live demo</a><a href="https://github.com/Lumen-void/nektron">Source</a></div>
+      </article>
+
+      <article class="project" style="--accent:#f97316">
+        <div class="project-head"><h3>Foodily</h3><span class="tag">Demo dashboard</span></div>
+        <p>Food operations command dashboard using fake demo data, plus public-safe monorepo source excluding private env and DB files.</p>
+        <div class="links"><a href="https://lumen-void.github.io/foodily/">Live demo</a><a href="https://github.com/Lumen-void/foodily">Source</a></div>
+      </article>
+
+      <article class="project" style="--accent:#ec4899">
+        <div class="project-head"><h3>XYZZZ</h3><span class="tag">Static export</span></div>
+        <p>Sanitized public site export with campaign, product, package and contact pages, excluding private build and deploy artifacts.</p>
+        <div class="links"><a href="https://lumen-void.github.io/xyzzz/">Live demo</a><a href="https://github.com/Lumen-void/xyzzz">Source</a></div>
+      </article>
+    </main>
+
+    <footer>
+      These deployments are presentation-safe public versions. Full production behavior that needs PHP, MySQL, private APIs, uploads or background workers requires backend hosting with environment variables and a database.
+    </footer>
+  </div>
+</body>
+</html>
