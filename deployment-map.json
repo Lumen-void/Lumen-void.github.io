@@ -1,0 +1,100 @@
+{
+  "generatedFor": "public-safe portfolio deployments",
+  "defaultAvailableHost": "github-pages",
+  "projects": [
+    {
+      "name": "scar",
+      "repository": "https://github.com/Lumen-void/scar",
+      "liveUrl": "https://lumen-void.github.io/scar/",
+      "selectedHost": "github-pages",
+      "pagesSource": "main:/docs",
+      "runtime": "static-next-export",
+      "fullDeploymentStatus": "live"
+    },
+    {
+      "name": "miss",
+      "repository": "https://github.com/Lumen-void/miss",
+      "liveUrl": "https://lumen-void.github.io/miss/",
+      "selectedHost": "github-pages",
+      "pagesSource": "main:/docs",
+      "runtime": "static-visual-showcase",
+      "fullDeploymentStatus": "live-public-demo"
+    },
+    {
+      "name": "reco",
+      "repository": "https://github.com/Lumen-void/reco",
+      "liveUrl": "https://lumen-void.github.io/reco/",
+      "selectedHost": "github-pages",
+      "pagesSource": "main:/docs",
+      "runtime": "static-html",
+      "fullDeploymentStatus": "live"
+    },
+    {
+      "name": "pazy",
+      "repository": "https://github.com/Lumen-void/pazy",
+      "liveUrl": "https://lumen-void.github.io/pazy/",
+      "selectedHost": "github-pages",
+      "nextHostWhenConnected": "php-mysql-host",
+      "pagesSource": "main:/docs",
+      "runtime": "php-mysql",
+      "fullDeploymentStatus": "needs-backend-host-and-demo-db"
+    },
+    {
+      "name": "doctor",
+      "repository": "https://github.com/Lumen-void/doctor",
+      "liveUrl": "https://lumen-void.github.io/doctor/",
+      "selectedHost": "github-pages",
+      "nextHostWhenConnected": "backend-web-service",
+      "pagesSource": "main:/docs",
+      "runtime": "backend-app",
+      "fullDeploymentStatus": "needs-backend-host"
+    },
+    {
+      "name": "jsaindia",
+      "repository": "https://github.com/Lumen-void/jsaindia",
+      "liveUrl": "https://lumen-void.github.io/jsaindia/",
+      "selectedHost": "github-pages",
+      "pagesSource": "main:/docs",
+      "runtime": "static-php-export",
+      "fullDeploymentStatus": "live"
+    },
+    {
+      "name": "finready",
+      "repository": "https://github.com/Lumen-void/finready",
+      "liveUrl": "https://lumen-void.github.io/finready/",
+      "selectedHost": "github-pages",
+      "pagesSource": "main:/docs",
+      "runtime": "static-html",
+      "fullDeploymentStatus": "live"
+    },
+    {
+      "name": "nektron",
+      "repository": "https://github.com/Lumen-void/nektron",
+      "liveUrl": "https://lumen-void.github.io/nektron/",
+      "selectedHost": "github-pages",
+      "nextHostWhenConnected": "node-web-service",
+      "pagesSource": "main:/docs",
+      "runtime": "built-frontend-plus-node-source",
+      "fullDeploymentStatus": "frontend-live-backend-needs-host"
+    },
+    {
+      "name": "foodily",
+      "repository": "https://github.com/Lumen-void/foodily",
+      "liveUrl": "https://lumen-void.github.io/foodily/",
+      "selectedHost": "github-pages",
+      "nextHostWhenConnected": "vercel-plus-render-or-node-host",
+      "pagesSource": "main:/docs",
+      "runtime": "next-nest-monorepo",
+      "fullDeploymentStatus": "demo-live-full-app-needs-api-host"
+    },
+    {
+      "name": "xyzzz",
+      "repository": "https://github.com/Lumen-void/xyzzz",
+      "liveUrl": "https://lumen-void.github.io/xyzzz/",
+      "selectedHost": "github-pages",
+      "pagesSource": "main:/docs",
+      "runtime": "static-export",
+      "fullDeploymentStatus": "live"
+    }
+  ]
+}
